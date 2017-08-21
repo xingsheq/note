@@ -1,0 +1,11 @@
+git clone git@github.com:xingsheq/xingsheq.github.io.git
+
+
+
+
+
+## create branch
+
+git branch hexo
+
+git push --set-upstream origin hexo
