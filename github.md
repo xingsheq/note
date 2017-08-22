@@ -90,71 +90,76 @@ hexo g -d
 
 现在在github的myblog仓库的master分支，可以看到生成的public目录的网站文件。
 
+# develop theme as submodule
 
+如果有自己定制的theme，希望也通过github来管理代码，可以作为myblog的子模块来管理，可以fork别人的主题后，再上面修改，也可以把已经修改过的主题先加入到repository,已上传已修改的为例。
 
-create your theme repository
+## create your theme repository or fork from github
 
+在github创建主题repository后，上传theme代码
+
+```
+mkdir hexo-theme-next-xingsheq
+cd hexo-theme-next-xingsheq
+git init
+git add .
+git commit -m "add my theme"
 git remote add origin git@github.com:xingsheq/hexo-theme-next-xingsheq.git
+git push origin master
+```
 
+## create submodule and link to theme repository
 
+themes/next-xingsheq目录下回clone git@github.com:xingsheq/hexo-theme-next-xingsheq.git
 
+```
 git submodule add git@github.com:xingsheq/hexo-theme-next-xingsheq.git themes/next-xingsheq
+```
 
 ## modify theme and commit
 
-`cd theme/next-xingsheq` 
-
- `git add` & `git commit`
-
-`git push origin master`.
+```
+cd theme/next-xingsheq 
+git add
+git commit
+git push origin master
+```
 
 ## commit theme modify to hexo
 
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$ git status
-On branch hexo
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+- 现在myblog工程目录下有一个记录子模块的文件.gitmodules，需要提交更新后，主版本库才变成包含子模块的版本库。
 
-        modified:   themes/next-xingsheq (new commits)
+```
+cd myblog
+git status
+git add themes/next-xingsheq
+git commit -m "add theme update to hexo"
+git push origin hexo
+```
 
-no changes added to commit (use "git add" and/or "git commit -a")
+- 每次next-xingsheq提交后，主版本库myblog指向的是上次主版本提交后指向的next-xingsheq版本，需要再次提交同步
 
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$ git add themes/next-xingsheq
+```
+cd myblog
+git status
+git add themes/next-xingsheq
+git commit -m "add theme update to hexo"
+git push origin hexo
+```
 
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$ git commit -m "add theme update to hexo"
-[hexo 8df9ef4] add theme update to hexo
- 1 file changed, 1 insertion(+), 1 deletion(-)
+# get repository and develop at another PC  
 
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$ git status
-On branch hexo
-nothing to commit, working directory clean
-
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$ git push origin hexo
-Enter passphrase for key '/c/Users/xingsheq/.ssh/id_rsa':
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 332 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To git@github.com:xingsheq/myblog.git
-   4901d43..8df9ef4  hexo -> hexo
-
-xingsheq@CV0015735N1 MINGW64 /e/VPS/myblog (hexo)
-$
-
-## Home PC  get 
+- 克隆带子模组的git库，并不能自动将子模组的版本库克隆出来，需要执行 git submodule init，
+  git submodule update
+- git submodule update后，HEAD处于游离状态，需要切换到master，再做修改，提交
 
 ```
 git clone -b hexo git@github.com:xingsheq/myblog.git
+cd myblog
+cd themes/next-xingsheq/
 git submodule init
 git submodule update
+git checkout master
 ```
 
 

@@ -165,7 +165,7 @@ alipay_text: 支付宝打赏
 ### 添加分享
 
 	jiathis:
-		uid: 2141554
+		uid: xxxx
 
 ## 其他优化 ##
 ### 使用more控制摘要 ###
