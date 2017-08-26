@@ -19,8 +19,8 @@ script:
 - bash deploy.sh
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv
-  -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_1fc90f464345_key -iv $encrypted_1fc90f464345_iv -in id_rsa.enc -out id_rsa -d
+
 addons:
   ssh_known_hosts:
   - 45.62.102.9:28529
