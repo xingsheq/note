@@ -1,0 +1,23 @@
+language: node_js
+node_js: stable
+
+branches:
+  only:
+  - hexo
+
+cache:
+  directories:
+  - node_modules
+  
+install:
+- npm install hexo
+- npm install
+- hexo clean && hexo g
+script:
+
+before_install:
+
+addons:
+  ssh_known_hosts:
+  - 45.62.102.9:28529
+  - 192.30.253.112
