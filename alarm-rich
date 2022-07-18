@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-17T11:09:41.662Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="BoD35YkVUXlF9-gZfd8K" version="20.1.1" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-07-18T02:07:41.191Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="c2rwhgrkIyWpGPiW-_28" version="20.1.1" type="github" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="核心网告警丰富">
-    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="920" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -33,7 +33,7 @@
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-12" value="根据网元名称，查寻VNF网元表，核心网子切片与网元关系表，产品实例表，产品实例与DNN关系表" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="145" y="280" width="150" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="3KyB9QC8eLvNqJRdggj4-0" value="&lt;pre style=&quot;background-color: rgb(255, 255, 255); font-family: Consolas; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;color:#008000;font-weight:bold;&quot;&gt;/AMF/SMF/PCF/PUDR&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color: rgb(255, 255, 255); font-family: Consolas; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;color:#008000;font-weight:bold;&quot;&gt;/UDM/UUDR/SMSF/&lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;background-color: rgb(255, 255, 255); font-family: Consolas; font-size: 9.8pt;&quot;&gt;&lt;span style=&quot;color:#008000;font-weight:bold;&quot;&gt;NRF/NSSF/IWF/CHF&lt;/span&gt;&lt;/pre&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="3KyB9QC8eLvNqJRdggj4-0" value="&lt;pre style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font face=&quot;Consolas&quot; color=&quot;#008000&quot;&gt;&lt;span style=&quot;font-size: 13.0667px;&quot;&gt;&lt;b&gt;AMF/SMF/UDM/NSSF/CH&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;font face=&quot;Consolas&quot;&gt;&lt;span style=&quot;font-size: 9.8pt;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/font&gt;&lt;/pre&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="40" y="130" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="3KyB9QC8eLvNqJRdggj4-1" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.18;exitY=0.35;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="3KyB9QC8eLvNqJRdggj4-0">
